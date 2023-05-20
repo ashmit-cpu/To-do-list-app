@@ -7,32 +7,35 @@
 </head>
 
 <body>
-    <div class="top-section">
-        <h1>To-do List</h1>
-        <form id="new-task">
-            <input type="text" name="new-task" id="new-task-input" placeholder="What do you have planned?">
-            <button type="submit"id="new-task-submit"value="">Add task</button>
+    <div class="container">
 
-        </form>
-    </div>
-    <main>
-        <section class="task-list">
-            <h2>Tasks</h2>
-            <div class="tasks">
-                <div class="task">
-                    <div class="content">
-                        <input type="text"class="text"value="A new task"readonly>
-                    </div>
-                    <div class="buttons">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
+        <div class="top-section">
+            <h1>To-do List</h1>
+            <form id="new-task">
+                <input type="text" name="new-task" id="new-task-input" placeholder="What do you have planned?" required>
+                <button type="submit" id="new-task-submit" value="">Add task</button>
 
-                    </div>
+            </form>
+        </div>
+        <main>
+            <section class="task-list">
+                <h2>Tasks</h2>
+                <div class="tasks" id="tasks">
+                    <!-- <div class="task">
+                        <div class="content">
+                            <input type="text"class="text"value="A new task"readonly>
+                        </div>
+                        <div class="buttons">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                            
+                        </div>
+                    </div> -->
                 </div>
-            </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </div>
 </body>
 
 </html>

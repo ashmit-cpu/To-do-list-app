@@ -16,26 +16,23 @@
 
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    
     color: gainsboro;
     background-color: var(--dark);
 
 }
 
 .top-section {
-    padding: 2rem 1rem;
+    padding: 3em 1em;
     max-width: 800px;
-    width: 100%;
     margin: 0 auto;
 }
 
 .top-section h1 {
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--grey);
-    margin-bottom: 1rem;
+    color: gainsboro;
+    margin-bottom: 1.5rem;
 
 }
 
@@ -51,6 +48,7 @@ button {
     appearance: none;
 }
 
+/* .top-section styling */
 #new-task-input {
     width: 80%;
     background-color: var(--darker);
@@ -65,60 +63,131 @@ button {
     color: var(--grey);
 }
 
+/* Add task button styling */
+
 #new-task-submit {
     color: var(--pink);
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 #new-task-submit:hover {
-	opacity: 0.7;
-}
-#new-task-submit:active {
-	opacity: 0.6;
+    opacity: 0.7;
 }
 
-main{
-    max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
+#new-task-submit:active {
+    opacity: 0.6;
 }
-.task{
+
+main {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.task {
     display: flex;
 }
 
 .task-list {
-	padding: 1rem;
+    padding: 1rem;
 }
 
-.task-list h2{
+.task-list h2 {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--grey);
     margin-bottom: 1rem;
 }
 
-.task .content .text{
+.tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* inputbox styling */
+.task .content input {
     color: var(--light);
     font-size: 1.125rem;
-	width: 95%;
-    min-width: 400px;
-	display: block;
-	transition: 0.4s;
+    width: 100%;
+    background-color: var(--darkest);
+    display: block;
+    transition: 0.4s;
 }
 
 .task .content .text:not(:read-only) {
-	color: var(--pink);
+    color: var(--pink);
 }
 
 .task .buttons {
-	display: flex;
-	margin: 0 -0.5rem;
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .buttons button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: 0.4s ease-in;
+}
+
+.task .buttons button:hover {
+    opacity: .7;
+}
+
+.task .buttons button:active {
+    opacity: .6;
+}
+
+.task .buttons .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.task .buttons .delete {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: crimson;
 }
 
 
+@media all and (max-width:992px) {
+    body {
+        font-size: 14px;
+    }
+
+    .top-section {
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #new-task {
+        align-items: center;
+    }
+
+    #new-task-input {
+        width: 80%;
+        margin-right: 10px;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        max-width: none;
+    }
+
+    .task .content input {
+        width: 100%;
+    }
+}
