@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
         const task_div = document.createElement('div');
         task_div.classList.add('task');
 
+
         const content_div = document.createElement('div');
         content_div.classList.add('content');
 

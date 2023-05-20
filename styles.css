@@ -16,28 +16,39 @@
 
 
 body {
-    
+
     color: gainsboro;
     background-color: var(--dark);
 
 }
 
+.container {
+    margin-top: 70px;
+    padding: 0 30px 0 30px;
+
+
+}
+
 .top-section {
-    padding: 3em 1em;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .top-section h1 {
     font-size: 2.5rem;
     font-weight: 400;
-    color: gainsboro;
-    margin-bottom: 1.5rem;
-
+    background: -webkit-linear-gradient(var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 #new-task {
     display: flex;
+    justify-content: center;
 }
 
 input,
@@ -49,14 +60,14 @@ button {
 }
 
 /* .top-section styling */
-#new-task-input {
+#new-task input {
     width: 80%;
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
     color: var(--light);
-    font-size: 1.1rem;
+    font-size: 18px;
 }
 
 #new-task-input::placeholder {
@@ -65,7 +76,7 @@ button {
 
 /* Add task button styling */
 
-#new-task-submit {
+#new-task button {
     color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
@@ -84,9 +95,9 @@ button {
     opacity: 0.6;
 }
 
-main {
-    max-width: 800px;
-    width: 90%;
+
+.bottom-section {
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -102,27 +113,31 @@ main {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--grey);
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
 .tasks .task {
     display: flex;
     justify-content: space-between;
     background-color: var(--darkest);
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 16px;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
+
+
 
 /* inputbox styling */
 .task .content input {
     color: var(--light);
     font-size: 1.125rem;
-    width: 100%;
     background-color: var(--darkest);
     display: block;
     transition: 0.4s;
 }
+
+
+
 
 .task .content .text:not(:read-only) {
     color: var(--pink);
@@ -162,32 +177,67 @@ main {
 }
 
 
-@media all and (max-width:992px) {
-    body {
-        font-size: 14px;
+@media all and (max-width:768px) {
+
+    .container {
+        margin-top: 80px;
+        padding: 0 15px 0 15px;
+
+
     }
 
-    .top-section {
-        padding-top: 80px;
-        padding-left: 0;
-        padding-right: 0;
+
+    .top-section h1 {
+        font-size: 30px;
+        margin-left: 10px;
+
+
+
     }
 
-    #new-task {
-        align-items: center;
+
+    #new-task input {
+        width: 70%;
+        margin-right: 5px;
+
+
     }
 
-    #new-task-input {
-        width: 80%;
-        margin-right: 10px;
-        margin-bottom: 1rem;
+    #new-task-input::placeholder {
+        font-size: 12px;
     }
 
-    main {
-        max-width: none;
+    #new-task-submit {
+        font-size: 10px;
+
+    }
+
+    .tasks .task {
+
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 12px;
     }
 
     .task .content input {
-        width: 100%;
+        width: 50%;
     }
+
+
+    .task .buttons button {
+        font-size: 15px;
+
+    }
+
+    #new-task button {
+        font-size: 16px;
+
+    }
+
+    .task .content input {
+        font-size: 14px;
+    }
+
+
+
 }
