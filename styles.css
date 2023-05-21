@@ -38,9 +38,7 @@ body {
 .top-section h1 {
     font-size: 2.5rem;
     font-weight: 400;
-    background: -webkit-linear-gradient(var(--purple), var(--pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: gainsboro;
     margin-bottom: 3rem;
     font-weight: 600;
     text-align: center;
