@@ -80,10 +80,25 @@ window.addEventListener('load', () => {
 
             });
             delete_btn.addEventListener('click', (e) => {
-                todoList.splice(todoList.indexOf(taskText), 1);
-                saveTodoList();
-                tasks_parent.removeChild(task_div);
-            });
+                swal({
+                  title: "Are you sure?",
+                  text: "Do you want to delete the Task?",
+                  icon: "warning",
+                  buttons: ["Cancel", "Yes"],
+                  dangerMode: true,
+                })
+                .then((willDelete) => {
+                  if (willDelete) {
+                    // Delete the task
+                    todoList.splice(todoList.indexOf(taskText), 1);
+                    saveTodoList();
+                    tasks_parent.removeChild(task_div);
+                    
+                    
+                  } 
+                });
+              });
+              
         });
     };
 

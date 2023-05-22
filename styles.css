@@ -175,6 +175,36 @@ button {
 }
 
 
+
+/* alert box styling */
+
+.swal-modal {
+    background-color: rgba(39, 38, 43, 0.89);
+    border: 1px solid rgba(196, 196, 196, 0.507);
+}
+
+.swal-title {
+    color: gainsboro;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+
+}
+
+.swal-text {
+
+    color: var(--light);
+}
+
+.swal-button--confirm {
+    border-radius: 2px;
+    background-color: rgb(206, 15, 53);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
 @media all and (max-width:768px) {
 
     .container {
@@ -234,6 +264,12 @@ button {
 
     .task .content input {
         font-size: 14px;
+    }
+
+
+    .swal-modal {
+        width: 90%;
+        height: auto;
     }
 
 
